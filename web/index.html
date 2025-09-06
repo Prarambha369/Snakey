@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakey - Snake Game</title>
+    <meta name="description" content="Play the classic Snake game in your browser! Control the snake, eat apples, and grow longer while avoiding walls and your own tail.">
+    <meta name="keywords" content="snake game, browser game, html5 game, godot">
+    <meta name="author" content="Prarambha369">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Snakey - Snake Game">
+    <meta property="og:description" content="Play the classic Snake game in your browser!">
+    <meta property="og:url" content="">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .game-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 0 0 20px 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .controls h3 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+        
+        .controls p {
+            margin: 5px 0;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #ffd700;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        
+        #canvas {
+            display: block;
+            margin: 0 auto;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .game-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐍 Snakey</h1>
+        
+        <div class="controls">
+            <h3>🎮 How to Play</h3>
+            <p><strong>W A S D</strong> - Move the snake</p>
+            <p><strong>🍎 Goal:</strong> Eat apples to grow longer</p>
+            <p><strong>⚠️ Avoid:</strong> Walls and your own tail</p>
+        </div>
+        
+        <div class="loading" id="loading">
+            🐍 Loading Snakey Game...
+        </div>
+        
+        <canvas id="canvas" style="display: none;">
+            Your browser doesn't support HTML5 canvas. Please update your browser to play this game.
+        </canvas>
+    </div>
+    
+    <div class="footer">
+        <p>Made with ❤️ using <a href="https://godotengine.org/" target="_blank">Godot Engine</a></p>
+        <p><a href="https://github.com/Prarambha369/Snakey" target="_blank">View Source Code</a></p>
+    </div>
+
+    <script>
+        // This will be replaced by Godot's export process with the actual game loading code
+        // For now, this is a template that shows how the final HTML structure will look
+        
+        // Hide loading message once game loads
+        function onGameLoaded() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('canvas').style.display = 'block';
+        }
+        
+        // Show error message if game fails to load
+        function onGameError(error) {
+            document.getElementById('loading').innerHTML = '❌ Failed to load game. Please refresh the page.';
+            console.error('Game loading error:', error);
+        }
+        
+        // Placeholder for Godot's generated JavaScript
+        // When exported from Godot, this will be replaced with actual game loading code
+        console.log('Snakey game template loaded. Export from Godot to replace this with actual game.');
+        
+        // Simulate loading for demo purposes
+        setTimeout(() => {
+            document.getElementById('loading').innerHTML = '🎮 Ready to export from Godot!<br><small>Follow the README instructions to generate the actual game files.</small>';
+        }, 1000);
+    </script>
+</body>
+</html>
