@@ -1,3 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Web export build artifacts
+web/*.js
+web/*.wasm
+web/*.pck
+web/*.png
+web/*.ico
+web/*.worker.js
+web/*.audio.worklet.js
+
+# Keep the template HTML file
+!web/index.html
